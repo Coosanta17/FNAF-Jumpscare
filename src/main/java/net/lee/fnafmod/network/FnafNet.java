@@ -9,7 +9,7 @@ public class FnafNet {
     public static final String PROTOCOL = "1";
 
     public static final SimpleChannel CHANNEL = NetworkRegistry.ChannelBuilder
-            .named(ResourceLocation.fromNamespaceAndPath("fnafmod", "main"))
+            .named(new ResourceLocation("fnafmod", "main"))
             .networkProtocolVersion(() -> PROTOCOL)
             .clientAcceptedVersions(PROTOCOL::equals)
             .serverAcceptedVersions(PROTOCOL::equals)
