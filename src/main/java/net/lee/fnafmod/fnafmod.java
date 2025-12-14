@@ -14,7 +14,8 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 public class fnafmod {
     public static final String MOD_ID = "fnafmod";
 
-    public fnafmod(FMLJavaModLoadingContext context) {
+    public fnafmod() {
+        FMLJavaModLoadingContext context = FMLJavaModLoadingContext.get();
         IEventBus modBus = context.getModEventBus();
         modBus.addListener(this::commonSetup);
         DistExecutor.safeRunWhenOn(Dist.CLIENT, () -> ClientEvents::init);
